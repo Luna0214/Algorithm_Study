@@ -1,0 +1,141 @@
+# Stack: FILO(First-In, Last-Out)
+# -----------------------------------------------------------------------------
+#Theories:
+# ex.1
+Books = [book1, book2, book3]
+
+# push book4
+Books = [book1, book2, book3, book4] # add to the top
+
+# peek
+# We can only see the top book on the stack
+# On ex.1, we able to see just 'book4'
+
+# pop
+# take an element from the top.
+
+Books = [book1, book2, book3] => 'book4'
+
+# Method:
+# 1. Direct Realization (one that Python uses)
+# ex.2
+class: Stack(list):
+  push = list.append
+  def peek(self):
+    return self[-1]
+      self[len(self)=1]
+# pop() is already exist in python method
+ 
+s = Stack()
+s.push(1)
+s.push(5)
+s.push(10)
+
+print("my stack is: ", s)   ==> my stack is [1, 5, 10]
+print("poped value is: ", s.pop())   ==> popped value is: 10
+print("my stack is: ", s)   ==> my stack is [1, 5]
+print("peeked value is :", s.peek())  ==> peeked value is: 5
+
+# 2. Import from Class
+
+# 3. List stack Realization
+ex.3
+s = []
+s.append(1)
+s.append(5)
+s.append(10)
+print("my stack is: ", s)  ==> my stack is: [1, 5, 10]
+print("popped value is: ", s.pop())   ==> popped value is: 10
+print("my stack is: ", s)   ==> my stack is: [1, 5]
+print("peeked value is: ", s[-1])   ==> peeked value is: 5
+
+# Usages of the Stack:
+# 1. 'Back/forth' pages of Internet Browser
+# 2. Depth First Search(DFS)
+
+# -----------------------------------------------------------------------------
+
+# Queue: FIFO(First-In, First-Out)
+# -----------------------------------------------------------------------------
+# ex. 4
+# put: insert in list
+# put book4
+Books = [book1, book2, book3]   ==>  Books = [book1, book2, book3, book4]
+
+# peek: see from bottom
+Books = [book1, book2, book3, book4]   ==> peek: book1
+
+# get: First-Out
+Books = [book1, book2, book3, book4]    ==> get book1 first.
+
+
+# 1. Direct Realization
+# ex. 5
+class Queue(list):
+  put = list.append
+  def peek(self):
+    return self[0]
+  def get(self):
+    return self.pop(0)
+    
+q = Queue()
+q.put(1)
+q.put(5)
+q.put(10)
+print("my queue is: ", q)   ==>  my queue is: [1, 5, 10]
+print("removed value is: ", q.get())   ==>   removed value is: 1
+print("my queue is: ", q)   ==>  my queue is: [5, 10]
+print("peeked value is: ", q.peek())   ==>  peeked value is: 5
+
+
+# 2. Import from Class
+from queue import Queue
+
+q = Queue()
+q.put(1)
+q.put(5)
+q.put(10)
+print("my queue is: ", q)   ==>  my queue is: [1, 5, 10]
+print("removed value is: ", q.get())   ==>   removed value is: 1
+print("my queue is: ", q)   ==>  my queue is: [5, 10]
+print("peeked value is: ", q.peek())   ==>  peeked value is: 5
+
+
+# 3. List stack Realization (practice included)
+# self-practice:
+
+q = []
+
+q.append(1)
+q.append(2)
+q.append(3)
+print(q)  ==>   q = [1,2,3]
+
+print("put4: ", q.append(4))   ==>   q = [1,2,3,4]
+print("get1: ", q.pop[0])   ==>   q = [2,3,4]
+print("peek: ", q[0])   ==>   2
+
+
+# solution:
+q = []
+q.append(1)
+q.append(5)
+q.append(10)
+print("my queue is: ", q)   ==>   my queue is: [1, 5, 10]
+print("removed value is: ", q.pop[0])   ==>   removed value is: 1
+print("my queue is: ", q)   ==>   my queue is: [5, 10]
+print("peeked value is: ", q[0])   ==>   peeked value is: 5
+print("my queue is: ", q)   ==>   my queue is: [5, 10]
+
+
+
+# Usages of the Queue
+# 1. Print waiting List(First-In, First-Out)
+# 2. Breath First Search(BFS)
+
+
+
+
+
+
+
